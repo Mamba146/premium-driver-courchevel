@@ -43,7 +43,7 @@ img {
     backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
-    justify-content: center; /* центрируем весь блок */
+    justify-content: center;
     padding: 0 40px;
     z-index: 1000;
     border-bottom: 1px solid #111;
@@ -53,7 +53,7 @@ img {
     display: flex;
     align-items: center;
     gap: 26px;
-    position: relative; /* нужно для бургер-иконки */
+    position: relative;
 }
 
 .logo {
@@ -87,7 +87,15 @@ nav .active {
     border-radius: 6px;
 }
 
+/* ===========================
+   LANGUAGE SWITCH (DESKTOP)
+=========================== */
+
 .lang-switch {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: 20px;
     padding: 6px 14px;
     border: 1px solid #444;
     border-radius: 6px;
@@ -98,6 +106,33 @@ nav .active {
 
 .lang-switch:hover {
     color: #d4af37;
+    border-color: #d4af37;
+}
+
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    border-radius: 6px;
+    color: #d4af37;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.lang-item img {
+    width: 18px;
+    height: 18px;
+}
+
+.lang-item:hover {
+    background: rgba(212, 175, 55, 0.15);
+}
+
+.active-lang {
+    background: rgba(212, 175, 55, 0.25);
     border-color: #d4af37;
 }
 
@@ -156,6 +191,7 @@ nav .active {
 .big {
     font-size: 1.2rem;
 }
+
 /* GOLD WHATSAPP BUTTON */
 .whatsapp-gold {
     display: inline-block;
@@ -175,7 +211,6 @@ nav .active {
     background: linear-gradient(135deg, #e6c45a, #c9a33a);
     transform: translateY(-3px);
 }
-
 
 /* ===========================
    ADVANTAGES GRID
@@ -239,14 +274,14 @@ nav .active {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;              /* воздух вокруг машины */
+    padding: 20px;
 }
 
 .fleet-img img {
     width: 100%;
     height: auto;
-    max-height: 350px;          /* машина крупная, но не гигантская */
-    object-fit: contain;        /* показывает машину полностью */
+    max-height: 350px;
+    object-fit: contain;
     display: block;
 }
 
@@ -291,8 +326,6 @@ nav .active {
     margin-bottom: 14px;
     font-style: italic;
 }
-
-
 
 /* ===========================
    ABOUT PAGE
@@ -625,7 +658,7 @@ footer {
 }
 
 /* ===========================
-   BURGER MENU + MOBILE FIX
+   BURGER MENU + MOBILE FIX (ИСПРАВЛЕНО)
 =========================== */
 
 #menu-toggle {
@@ -645,12 +678,10 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* Показываем бургер */
     .menu-icon {
         display: block;
     }
 
-    /* Прячем меню */
     nav {
         display: none;
         flex-direction: column;
@@ -665,8 +696,9 @@ footer {
         text-align: center;
     }
 
-    /* Показываем меню при клике */
-    #menu-toggle:checked ~ nav {
+    /* ИСПРАВЛЕНО: меню теперь открывается всегда */
+    #menu-toggle:checked ~ nav,
+    #menu-toggle:checked ~ .menu-icon ~ nav {
         display: flex;
     }
 
@@ -674,6 +706,29 @@ footer {
         padding: 14px 0;
         font-size: 1.2rem;
         width: 100%;
+    }
+
+    /* ИСПРАВЛЕНО: языковые значки */
+    .lang-switch {
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        display: flex;
+        gap: 6px;
+        padding: 6px;
+        background: rgba(0,0,0,0.7);
+        border-radius: 6px;
+        z-index: 2000;
+    }
+
+    .lang-item {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .lang-item img {
+        width: 14px;
+        height: 14px;
     }
 
     /* Сетки → 1 колонка */
@@ -687,12 +742,10 @@ footer {
         gap: 30px;
     }
 
-    /* Контейнеры */
     section {
         padding: 40px 20px;
     }
 
-    /* Заголовки */
     h1 {
         font-size: 1.8rem;
     }
@@ -701,96 +754,22 @@ footer {
         font-size: 1.4rem;
     }
 
-    /* Текст */
     p {
         font-size: 1rem;
     }
 }
 
 /* ===========================
-   ACCORDION (PREMIUM DRIVER)
+   DESKTOP FIX FOR LANGUAGE SWITCH
 =========================== */
 
-.accordion-toggle {
-    background: #d4af37;
-    color: #000;
-    border: none;
-    padding: 10px 14px;
-    cursor: pointer;
-    font-weight: 600;
-    margin-top: 12px;
-    border-radius: 6px;
-    width: 100%;
-    text-align: left;
-    transition: background 0.25s ease, color 0.25s ease;
-}
+@media (min-width: 769px) {
 
-.accordion-toggle.active {
-    background: #b8922c;
-}
-
-.accordion-toggle::after {
-    content: "▼";
-    float: right;
-    transition: transform 0.35s ease;
-}
-
-.accordion-toggle.active::after {
-    transform: rotate(-180deg);
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    margin-top: 0;
-    transition: max-height 0.35s ease, opacity 0.35s ease, margin-top 0.35s ease;
-}
-
-.accordion-content.open {
-    opacity: 1;
-    margin-top: 12px;
-}
-
-.accordion-content ul {
-    padding-left: 0;
-    list-style: none;
-}
-
-.accordion-content li {
-    margin-bottom: 6px;
-    color: #bbb;
-}
-.lang-switch {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.lang-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    border: 1px solid rgba(212, 175, 55, 0.7);
-    border-radius: 6px;
-    color: #d4af37;
-    font-weight: 600;
-    font-size: 14px;
-    transition: 0.3s ease;
-}
-
-.lang-item img {
-    width: 18px;
-    height: 18px;
-}
-
-.lang-item:hover {
-    background: rgba(212, 175, 55, 0.15);
-}
-
-.active-lang {
-    background: rgba(212, 175, 55, 0.25);
-    border-color: #d4af37;
-}
+    .lang-switch {
+        position: static;
+        display: flex;
+        gap: 12px;
+        padding: 6px 14px;
+        background: none;
+        border: 1px solid #444;
+        border-radius: 
