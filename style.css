@@ -773,3 +773,126 @@ footer {
         background: none;
         border: 1px solid #444;
         border-radius: 
+/* ================================
+   PREMIUM CONTACT FORM — COURCHEVEL
+   ================================ */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Labels */
+.contact-form label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #e8e8e8;
+    letter-spacing: 0.3px;
+}
+
+/* Inputs & Textarea */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    transition: all 0.25s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* Focus effect — premium gold glow */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+    background: rgba(255, 255, 255, 0.12);
+    outline: none;
+}
+
+/* Main button */
+.btn-gold.big {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #d4af37, #b8922a);
+    color: #000;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-gold.big:hover {
+    background: linear-gradient(135deg, #e8c45a, #c9a33a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
+}
+
+/* WhatsApp button */
+.whatsapp-gold {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background: #25d366;
+    color: #000;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.whatsapp-gold:hover {
+    background: #1ebe5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+}
+
+/* Contact info blocks */
+.contact-info .info-block {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.25s ease;
+}
+
+.contact-info .info-block:hover {
+    border-color: #d4af37;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+/* Map placeholder */
+.map-placeholder {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+    .contact-form form {
+        padding: 22px;
+    }
+    .btn-gold.big {
+        font-size: 16px;
+    }
+}
