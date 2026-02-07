@@ -57,7 +57,7 @@
   }
   </script>
 
-  <!-- JSON-LD: CollectionPage (Fleet) -->
+  <!-- JSON-LD: CollectionPage (Fleet) — FIXED -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,15 +67,27 @@
     "description": "Mercedes V‑Class and E‑Class vehicles equipped for winter transfers in Courchevel and the Alps.",
     "hasPart": [
       {
-        "@type": "Product",
-        "name": "Mercedes V‑Class",
+        "@type": "Service",
+        "name": "Mercedes V‑Class Transfer",
         "description": "Spacious premium van for families, groups and ski equipment.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Premium Driver Courchevel"
+        },
+        "areaServed": "Courchevel and French Alps",
+        "serviceType": "Private Driver / Transfer",
         "image": "https://courcheveldriver.com/img/v-class.jpg"
       },
       {
-        "@type": "Product",
-        "name": "Mercedes E‑Class",
+        "@type": "Service",
+        "name": "Mercedes E‑Class Transfer",
         "description": "Premium sedan for solo travellers or couples.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Premium Driver Courchevel"
+        },
+        "areaServed": "Courchevel and French Alps",
+        "serviceType": "Private Driver / Transfer",
         "image": "https://courcheveldriver.com/img/e-class.jpg"
       }
     ]
@@ -84,6 +96,7 @@
 
   <link rel="stylesheet" href="../style.css" />
 </head>
+
 
 
 <body>
