@@ -59,7 +59,7 @@
   }
   </script>
 
-  <!-- JSON-LD: CollectionPage (Fleet) -->
+  <!-- JSON-LD: CollectionPage (Fleet) — FIXED -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,15 +69,27 @@
     "description": "Mercedes V‑Class et E‑Class équipées pour les transferts hivernaux à Courchevel et dans les Alpes.",
     "hasPart": [
       {
-        "@type": "Product",
-        "name": "Mercedes V‑Class",
+        "@type": "Service",
+        "name": "Transfert Mercedes V‑Class",
         "description": "Van premium spacieux idéal pour familles, groupes et équipements de ski.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Premium Driver Courchevel"
+        },
+        "areaServed": "Courchevel et Alpes françaises",
+        "serviceType": "Chauffeur privé / Transfert",
         "image": "https://courcheveldriver.com/img/v-class.jpg"
       },
       {
-        "@type": "Product",
-        "name": "Mercedes E‑Class",
+        "@type": "Service",
+        "name": "Transfert Mercedes E‑Class",
         "description": "Berline premium idéale pour voyageurs solos ou couples.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Premium Driver Courchevel"
+        },
+        "areaServed": "Courchevel et Alpes françaises",
+        "serviceType": "Chauffeur privé / Transfert",
         "image": "https://courcheveldriver.com/img/e-class.jpg"
       }
     ]
@@ -86,6 +98,7 @@
 
   <link rel="stylesheet" href="../style.css" />
 </head>
+
 
 
 <body>
