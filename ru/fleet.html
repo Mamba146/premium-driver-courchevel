@@ -59,7 +59,7 @@
   }
   </script>
 
-  <!-- JSON-LD: ItemList (Автопарк) -->
+  <!-- JSON-LD: ItemList (Автопарк) — FIXED -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,15 +67,134 @@
     "name": "Автопарк Premium Driver Courchevel",
     "itemListElement": [
       {
-        "@type": "Product",
-        "name": "Mercedes V-Class",
+        "@type": "Service",
+        "name": "Трансфер Mercedes V-Class",
         "description": "Просторный премиальный минивэн для семей, групп и лыжного снаряжения. Полный привод 4MATIC, зимняя подготовка.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Premium Driver Courchevel"
+        },
+        "areaServed": "Куршевель и Французские Альпы",
+        "serviceType": "Частный водитель / Трансфер",
         "image": "https://courcheveldriver.com/img/v-class.jpg"
       },
       {
-        "@type": "Product",
-        "name": "Mercedes E-Class",
+        "@type": "Service",
+        "name": "Трансфер Mercedes E-Class",
         "description": "Премиальный седан для одного пассажира или пары. Полный привод 4MATIC, кожаный салон, двухзонный климат‑контроль.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Premium Driver Courchevel"
+        },
+        "areaServed": "Куршевель и Французские Альпы",
+        "serviceType": "Частный водитель / Трансфер",
+        "image": "https://courcheveldriver.com/img/e-class.jpg"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Наш автопарк — Premium Driver Courchevel",
+    "url": "https://courcheveldriver.com/ru/fleet.html",
+    "description": "Премиальные автомобили Mercedes для зимних трансферов в Куршевель и Альпы."
+  }
+  </script>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Наш автопарк — Mercedes V‑Class и E‑Class | Трансферы Куршевель</title>
+  <meta name="description" content="Премиальные автомобили Mercedes, полностью подготовленные к зиме. Идеальны для семей, групп и лыжных поездок в Куршевель и Альпы." />
+  <meta name="keywords" content="автопарк Куршевель, Mercedes V-Class, Mercedes E-Class, трансфер на Mercedes, зимний трансфер" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="ru" />
+  <meta name="author" content="Premium Driver Courchevel" />
+
+  <link rel="canonical" href="https://courcheveldriver.com/ru/fleet.html" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Наш автопарк — Mercedes V‑Class и E‑Class" />
+  <meta property="og:description" content="Премиальные зимние автомобили Mercedes для трансферов в Куршевель." />
+  <meta property="og:image" content="https://courcheveldriver.com/img/v-class.jpg" />
+  <meta property="og:url" content="https://courcheveldriver.com/ru/fleet.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Наш автопарк — Mercedes V‑Class и E‑Class" />
+  <meta name="twitter:description" content="Премиальные автомобили для трансферов в Куршевель." />
+  <meta name="twitter:image" content="https://courcheveldriver.com/img/v-class.jpg" />
+
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Premium Driver Courchevel",
+    "image": "https://courcheveldriver.com/img/v-class.jpg",
+    "url": "https://courcheveldriver.com",
+    "telephone": "+33695252629",
+    "priceRange": "€€€",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Courchevel",
+      "addressRegion": "Auvergne-Rhône-Alpes",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      "Куршевель",
+      "Мерибель",
+      "Валь Торанс",
+      "Три Долины",
+      "Тинь",
+      "Валь д’Изер",
+      "Аэропорт Женева",
+      "Аэропорт Лион",
+      "Аэропорт Шамбери",
+      "Аэропорт Гренобль"
+    ],
+    "openingHours": "Mo-Su 00:00-23:59",
+    "description": "Премиальные зимние автомобили Mercedes для трансферов в Куршевель и Альпы."
+  }
+  </script>
+
+  <!-- JSON-LD: ItemList (Автопарк) — FIXED -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Автопарк Premium Driver Courchevel",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "name": "Трансфер Mercedes V-Class",
+        "description": "Просторный премиальный минивэн для семей, групп и лыжного снаряжения. Полный привод 4MATIC, зимняя подготовка.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Premium Driver Courchevel"
+        },
+        "areaServed": "Куршевель и Французские Альпы",
+        "serviceType": "Частный водитель / Трансфер",
+        "image": "https://courcheveldriver.com/img/v-class.jpg"
+      },
+      {
+        "@type": "Service",
+        "name": "Трансфер Mercedes E-Class",
+        "description": "Премиальный седан для одного пассажира или пары. Полный привод 4MATIC, кожаный салон, двухзонный климат‑контроль.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Premium Driver Courchevel"
+        },
+        "areaServed": "Куршевель и Французские Альпы",
+        "serviceType": "Частный водитель / Трансфер",
         "image": "https://courcheveldriver.com/img/e-class.jpg"
       }
     ]
@@ -96,38 +215,6 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 
-
-<body>
-
-<header class="header">
-    <div class="nav-inner">
-        <div class="logo">PREMIUM DRIVER</div>
-
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">☰</label>
-
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="fleet.html" class="active">Автопарк</a>
-            <a href="services.html">Услуги</a>
-            <a href="tarifs.html">Тарифы</a>
-            <a href="contact.html" class="btn">Заказать</a>
-        </nav>
-
-        <div class="lang-switch">
-            <a href="../en/fleet.html" class="lang-item">
-                <img src="../img/flag-en.svg" alt="EN"> EN
-            </a>
-            <a href="../fr/fleet.html" class="lang-item">
-                <img src="../img/flag-fr.svg" alt="FR"> FR
-            </a>
-            <a href="fleet.html" class="lang-item active-lang">
-                <img src="../img/flag-ru.svg" alt="RU"> RU
-            </a>
-        </div>
-
-    </div>
-</header>
 
 <main class="page">
 
